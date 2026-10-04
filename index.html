@@ -10,26 +10,44 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container-fluid bg-primary vh-100 p-5 text-light">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center p-5 fs-1 fw-bold">Translator</div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center p-5 fs-1 fw-bold">
+          Translator
         </div>
-        <div class="row h-25 w-100 align-items-center justify-content-center gap-2">
-            <div class="group col-5 d-flex flex-column gap-3">
-                <textarea placeholder="Enter Text" class="from-textarea style-textarea rounded-3 fs-3 p-2" rows="3"></textarea>
-                <select class="from-select rounded-3 p-2 fs-3 bg-black text-light bg-opacity-25 form-sellect" name="" id="">
-                </select>
-            </div>
-            <div class="group col-5 d-flex flex-column gap-3">
-                <textarea class="to-textarea rounded-3 fs-3 p-2 text-light" rows="3" disabled></textarea>
-                <select class="to-select rounded-3 p-2 fs-3 bg-black text-light bg-opacity-25 form-sellect" name="" id="">
-                </select>
-            </div>
-            <div class="col-3 btn btn-outline-light fs-3 m-4">Translate</div>
+      </div>
+      <div
+        class="row h-25 w-100 align-items-center justify-content-center gap-2"
+      >
+        <div class="group col-12 col-md-5 d-flex flex-column gap-3">
+          <textarea
+            placeholder="Enter Text"
+            class="from-textarea style-textarea rounded-3 fs-3 p-2"
+            rows="3"
+          ></textarea>
+          <select
+            class="from-select rounded-3 p-2 fs-3 bg-black text-light bg-opacity-25 form-sellect"
+            name=""
+            id=""
+          ></select>
         </div>
+        <div class="group col-12 col-md-5 d-flex flex-column gap-3">
+          <textarea
+            class="to-textarea rounded-3 fs-3 p-2 text-light"
+            rows="3"
+            disabled
+          ></textarea>
+          <select
+            class="to-select rounded-3 p-2 fs-3 bg-black text-light bg-opacity-25 form-sellect"
+            name=""
+            id=""
+          ></select>
+        </div>
+        <div class="col-6 col-md-3 btn btn-outline-light fs-3 m-4">Translate</div>
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
