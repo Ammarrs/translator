@@ -1,0 +1,23 @@
+.style-textarea {
+    background-color: #ffffff55 !important;
+    color: white !important;
+}
+
+textarea {
+    outline: none !important;
+    border: none !important;
+}
+
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.399);
+}
+
+.style-textarea:focus {
+    outline: none;
+    border: none;
+}
+
+select {
+    outline: none !important;
+    border: #ffffff !important;
+}
