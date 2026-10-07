@@ -9,7 +9,7 @@ let btn = document.querySelector(".btn");
 
 
 const options = Object.entries(countries).map(([code, language]) => {
-    return `<option value=${code}>${language}</option>`;
+    return `<option value="${code}">${language}</option>`;
 }).join("");
 
 fromLanguageSelect.innerHTML = options
@@ -29,15 +29,19 @@ btn.addEventListener("click", () => {
 });
 
 async function translate(string, from, to) {
-  let result = await fetch(
-    `https://api.mymemory.translated.net/get?q=${string}&langpair=${from}|${to}`,
+  try {
+    let result = await fetch(
+    `https://api.mymemory.translated.net/get?q=${encodeURIComponent(string)}&langpair=${from}|${to}`,
   );
-  let data = await result.json();
-  console.log(data);
-
-  let responseData = data["responseData"];
-  let translatedText = responseData["translatedText"];
+  let {responseData} = await result.json();
+  // console.log(data);
+  let {translatedText} = responseData;
   // console.log(translatedText);
 
-  toTextArea.innerHTML = translatedText;
+  toTextArea.value = translatedText;
+  } catch(e) {
+    console.log(e.message);
+    // console.log("Catch");  
+    
+  }
 }
